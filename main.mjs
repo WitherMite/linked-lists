@@ -16,7 +16,7 @@ list.prepend("whale");
 console.log(list.size);
 console.log(list.toString());
 
-console.log(list.at(3));
+console.log(list.at(3).value);
 
 list.pop();
 console.log(list.size);
@@ -28,3 +28,11 @@ console.log(list.find("ant"));
 console.log(list.contains("cat"));
 console.log(list.contains("fish"));
 console.log(list.contains("whale"));
+
+list.insertAt("ant", 3);
+console.log(list.size);
+console.log(list.toString());
+
+list.removeAt(5);
+console.log(list.size);
+console.log(list.toString());
