@@ -43,7 +43,7 @@ export default class LinkedList {
     return currentNode;
   }
   pop() {
-    secondLast = this.at(--this.size);
+    const secondLast = this.at(--this.size - 1);
     this.tail = secondLast;
     secondLast.next = null;
   }
