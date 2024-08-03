@@ -29,10 +29,10 @@ console.log(list.contains("cat"));
 console.log(list.contains("fish"));
 console.log(list.contains("whale"));
 
-list.insertAt("ant", 3);
+list.insertAt("ant", 0);
 console.log(list.size);
 console.log(list.toString());
 
-list.removeAt(5);
+list.removeAt(0);
 console.log(list.size);
 console.log(list.toString());

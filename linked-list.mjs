@@ -73,6 +73,9 @@ export default class LinkedList {
     return string;
   }
   insertAt(value, index) {
+    if (typeof index !== "number" || index < 0 || index >= this.size) return;
+    this.size++;
+    if (index === 0) return (this.head = new Node(value, this.head));
     let currentNode = this.head;
     let nextNode = currentNode.next;
     for (let i = 0; i < index - 1; i++) {
@@ -80,9 +83,11 @@ export default class LinkedList {
       nextNode = nextNode.next;
     }
     currentNode.next = new Node(value, nextNode);
-    this.size++;
   }
   removeAt(index) {
+    if (typeof index !== "number" || index < 0 || index >= this.size) return;
+    this.size--;
+    if (index === 0) return (this.head = this.head.next);
     let currentNode = this.head;
     let nextNode = currentNode.next;
     for (let i = 0; i < index - 1; i++) {
@@ -90,6 +95,5 @@ export default class LinkedList {
       nextNode = nextNode.next;
     }
     currentNode.next = nextNode.next;
-    this.size--;
   }
 }
